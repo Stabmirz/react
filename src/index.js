@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import './Components/index.css';
+// import App from './Components/App';
+import BooksApp from './Components/BooksApp'
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BooksApp />
   </React.StrictMode>,
   document.getElementById('root')
 );
