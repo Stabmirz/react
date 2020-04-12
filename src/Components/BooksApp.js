@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Books from './Books/books'
 
-class App extends Component {
+class BooksApp extends Component {
     state = {
         books:[
             {
@@ -31,13 +31,34 @@ class App extends Component {
         })
     }
 
+    changeHandler = (name,id) =>{
+        let newBooks = this.state.books.map(book =>{
+            if (book.id === id) {
+                return {
+                    ...book,
+                    name
+                }
+            }
+            return book;
+        })
+        this.setState({
+            books:newBooks
+        })
+        
+        
+    }
+
     render() { 
         return ( 
             <div className="container py-5">
-                <Books books={this.state.books} deleteHandler={this.deleteHandler}/> 
+                <Books 
+                    books={this.state.books} 
+                    deleteHandler={this.deleteHandler}
+                    changeHandler = {this.changeHandler}
+                /> 
             </div>
         );
     }
 }
  
-export default App;
+export default BooksApp;
