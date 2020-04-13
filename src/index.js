@@ -4,11 +4,12 @@ import './Components/index.css';
 // import App from './Components/App';
 import BooksApp from './Components/BooksApp'
 import PostsApp from './Components/PostsApp'
+import FormApp from './Components/FormApp'
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <PostsApp />
+    <FormApp />
   </React.StrictMode>,
   document.getElementById('root')
 );
