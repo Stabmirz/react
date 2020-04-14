@@ -5,11 +5,12 @@ import './Components/index.css';
 import BooksApp from './Components/BooksApp'
 import PostsApp from './Components/PostsApp'
 import FormApp from './Components/FormApp'
+import Form from './Components/PostForm'
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
   <React.StrictMode>
-    <FormApp />
+    <Form />
   </React.StrictMode>,
   document.getElementById('root')
 );

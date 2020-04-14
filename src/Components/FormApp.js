@@ -45,9 +45,13 @@ class FormApp extends Component {
     }
     
     submitHandler= (event) =>{
+
         event.preventDefault();
+        // recent submited data
         console.log(this.state);
-        this.formRef.reset();
+
+        //empty form input 
+        this.rref.reset();
         this.setState({
             ...initialState
         })
@@ -56,7 +60,7 @@ class FormApp extends Component {
     render() { 
         return ( 
             <div className="container py-20" style={{marginTop:50}} >
-                <form onSubmit={this.submitHandler} ref={(ref) => this.formRef = ref} >
+                <form onSubmit={this.submitHandler} ref={(ref) => this.rref = ref} >
 
                     <div className="form-group row">
                         <label htmlFor="name" className="col-sm-2 col-form-label">Full Name</label>
