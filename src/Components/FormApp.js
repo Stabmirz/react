@@ -63,32 +63,32 @@ class FormApp extends Component {
                 <form onSubmit={this.submitHandler} ref={(ref) => this.rref = ref} >
 
                     <div className="form-group row">
-                        <label htmlFor="name" className="col-sm-2 col-form-label">Full Name</label>
+                        <label htmlFor="name" className="col-sm-2 col-form-label text-left">Full Name</label>
                         <div className="col-sm-10">
                             <input onChange={this.changeHandler} type="text" className="form-control" id="name" name="name" placeholder="Enter Your Fullname" value={this.state.name} />
                         </div>
                     </div>
 
                     <div className="form-group row">
-                        <label htmlFor="email" className="col-sm-2 col-form-label">Email</label>
+                        <label htmlFor="email" className="col-sm-2 col-form-label text-left">Email</label>
                         <div className="col-sm-10">
                             <input onChange={this.changeHandler} type="email" className="form-control" id="email" name="email" placeholder="Enter Valid Email" value={this.state.email}/>
                         </div>
                     </div>
                     <div className="form-group row">
-                        <label htmlFor="password" className="col-sm-2 col-form-label">Password</label>
+                        <label htmlFor="password" className="col-sm-2 col-form-label text-left">Password</label>
                         <div className="col-sm-10">
                          <input onChange={this.changeHandler} type="password" className="form-control" id="password" name="password" placeholder="Enter your Password" value={this.state.password}/>
                         </div>
                     </div>
                     <div className="form-group row">
-                        <label htmlFor="bio" className="col-sm-2 col-form-label">Bio</label>
+                        <label htmlFor="bio" className="col-sm-2 col-form-label text-left">Bio</label>
                         <div className="col-sm-10">
                             <textarea onChange={this.changeHandler} className="form-control" id="bio" name="bio" rows="3" placeholder="Tell Us About Your Self" value={this.state.bio} />
                         </div>
                     </div>
                     <div className="form-group row">
-                        <label htmlFor="country" className="col-sm-2 col-form-label">Country</label>
+                        <label htmlFor="country" className="col-sm-2 col-form-label text-left">Country</label>
                         <div className="col-sm-10">
                             <select onChange={this.changeHandler} className="form-control" id="country" name="country">
                                 <option>Select Your Country</option>
@@ -102,33 +102,33 @@ class FormApp extends Component {
                     </div>
                     <fieldset className="form-group">
                         <div className="row">
-                        <legend className="col-sm-2 col-form-label">Gender</legend>
-                        <div className="col-sm-10">
-                            <div className="form-check">
-                                <input onChange={this.changeHandler} className="form-check-input" type="radio" name="gender" id="gridRadios1" value="Male"/>
-                                <label className="form-check-label" htmlFor="gridRadios1">
-                                    Male
-                                </label>
+                            <legend className="col-sm-2 col-form-label text-left">Gender</legend>
+                            <div className="col-sm-10">
+                                <div className="form-check text-left">
+                                    <input onChange={this.changeHandler} className="form-check-input" type="radio" name="gender" id="gridRadios1" value="Male"/>
+                                    <label className="form-check-label" htmlFor="gridRadios1">
+                                        Male
+                                    </label>
+                                </div>
+                                <div className="form-check text-left">
+                                    <input onChange={this.changeHandler} className="form-check-input" type="radio" name="gender" id="gridRadios2" value="Female"/>
+                                    <label className="form-check-label" htmlFor="gridRadios2">
+                                        Female
+                                    </label>
+                                </div>
+                                <div className="form-check text-left">
+                                    <input onChange={this.changeHandler} className="form-check-input" type="radio" name="gender" id="gridRadios3" value="Other" />
+                                    <label className="form-check-label" htmlFor="gridRadios3">
+                                        Other
+                                    </label>
+                                </div>
                             </div>
-                            <div className="form-check">
-                                <input onChange={this.changeHandler} className="form-check-input" type="radio" name="gender" id="gridRadios2" value="Female"/>
-                                <label className="form-check-label" htmlFor="gridRadios2">
-                                    Female
-                                </label>
-                            </div>
-                            <div className="form-check">
-                                <input onChange={this.changeHandler} className="form-check-input" type="radio" name="gender" id="gridRadios3" value="Other" />
-                                <label className="form-check-label" htmlFor="gridRadios3">
-                                    Other
-                                </label>
-                            </div>
-                        </div>
                         </div>
                     </fieldset>
                     <div className="form-group row">
-                        <div className="col-sm-2">Skills</div>
+                        <div className="col-sm-2 text-left">Skills</div>
                         <div className="col-sm-10">
-                            <div className="form-check">
+                            <div className="form-check text-left">
                                 <input onChange={this.changeHandler} className="form-check-input" type="checkbox" id="gridCheck1" name="skills" value="JavaScript"/>
                                 <label className="form-check-label" htmlFor="gridCheck1">
                                 JavaScript
@@ -136,7 +136,7 @@ class FormApp extends Component {
                             </div>
                         </div>
                         <div className="col-sm-2"></div>
-                        <div className="col-sm-10">
+                        <div className="col-sm-10 text-left">
                             <div className="form-check">
                                 <input onChange={this.changeHandler} className="form-check-input" type="checkbox" id="gridCheck2" name="skills" value="React"/>
                                 <label className="form-check-label" htmlFor="gridCheck1">
@@ -145,7 +145,7 @@ class FormApp extends Component {
                             </div>
                         </div>
                         <div className="col-sm-2"></div>
-                        <div className="col-sm-10">
+                        <div className="col-sm-10 text-left">
                             <div className="form-check">
                                 <input onChange={this.changeHandler} className="form-check-input" type="checkbox" id="gridCheck3" name="skills"  value="NodeJS"/>
                                 <label className="form-check-label" htmlFor="gridCheck1">
@@ -154,7 +154,7 @@ class FormApp extends Component {
                             </div>
                         </div>
                     </div>
-                    <div className="form-group row">
+                    <div className="form-group row pl-3">
                         <button type="submit" className="btn btn-primary">Submit</button>
                         <div className="col-sm-10">
                         </div>
